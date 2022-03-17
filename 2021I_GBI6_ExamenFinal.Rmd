@@ -77,7 +77,7 @@ Para comprender la data de esta evaluación se requiere conocer el significado d
 
 ### [0.5 PUNTOS] 1.1 Defina su directorio de trabajo. 
 ```{r wd}
-
+setwd("C:/Users/PERDSONAL/Documents/GitHub/2021II_GBI6_ExamenFinal")
 ```
 
 ### [0.5 PUNTOS] 1.2. Cargue la data "mRNA_expr.csv"
