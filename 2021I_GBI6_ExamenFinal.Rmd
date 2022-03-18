@@ -90,7 +90,6 @@ df <- read_csv("Data/mRNA_expr.csv")
 ### [1 PUNTO] 1.3 Cree una función de nombre ```long_df``` para transformar la data ```df``` de la forma wide a long.
 
 ```{r funcion_long}
-# Escriba aquí la función long_df
 library(tidyr)
 library(dplyr)
 long_df <- function(df) {
@@ -105,13 +104,11 @@ long_df <- function(df) {
 ### [1 PUNTO] 1.4 Genere la data ```df_long``` utilizandola función ```long_df```. 
 La tabla resultante tendrá tres columnas: ```dataset, gen, expresion_level```.  
 ```{r df_long}
-# Genere la data df_long 
 df_long <- long_df(df)
 ```
 
 ### [0.5 PUNTOS] 1.5 A partir de la data ```df_long```, genere un **Descriptive table** (librería ```sjPlot```) y guárdelo en el subdirectorio "result"  con el nombre **mRNA_expr_summary.doc** (previamente debe seleccionar las celdas adecuadas con funciones de la librería ```dplyr``` en conjunto con el operador ```%>%```). 
 ```{r desc_table}
-# Escriba el código para crear el Descriptive table library(sjPlot)
 library(sjmisc)
 library(dplyr)
 filtro <- df_long %>% filter(dataset == "KIPAN") %>% select(2:3) 
@@ -156,8 +153,9 @@ cancertype_boxplots[[3]]
 
 ### [0.5 PUNTOS] 2.3 Guarde en el subdirectorio ```result``` el tercer plot de la lista ```cancertype_boxplots``` con el nombre ```boxplot3.png```. La definición de a figura debe ser de 300dpi. 
 ```{r boxplot3}
-# Escriba el código para guardar la tercera figura de la lista. 
-
+d <- cancertype_boxplots[[3]]
+ggsave(filename = "results/boxplot3.png", units="in",
+dpi = 300,limitsize=TRUE)
 
 ```
 
