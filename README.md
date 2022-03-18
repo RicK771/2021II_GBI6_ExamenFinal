@@ -13,5 +13,5 @@ Tipo de sistema	Sistema operativo de 64 bits, procesador x64
 Lápiz y entrada táctil	La entrada táctil o manuscrita no está disponible para esta pantalla
 #### Programas 
 Rstudio, Anaconda & Jupiter
-## Libreria utilizadas 
-### dplyr,ggplot y sjPlot
+#### Libreria utilizadas 
+dplyr,ggplot y sjPlot
