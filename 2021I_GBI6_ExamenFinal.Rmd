@@ -119,14 +119,13 @@ filtro <- df_long %>% filter(dataset == "KIPAN") %>% select(2:3)
 desc_table <- filtro %>% group_by(gen) %>% mutate(row = row_number()) %>%
   tidyr::pivot_wider(names_from = gen, values_from = expresion_level) %>%
   select(-row)
-descr(desc_table) %>% tab_df(title = "Descripte table de cancer de riñon y su nivel de expresión", file = "results/mRNA_expr_summary.doc")
+descr(desc_table) %>% tab_df(title = "Descripte table de cancer de riñon y su nivel de expresión", file = "results/mRNA_expr_summary.csv")
 ```
 
 ### [0.5 PUNTOS] 1.6 Interprete los resultados de la tabla resultante de la sección 1.5. 
 
-
 ```{tex}
-# Escriba aquí su interpretación 
+# La tabla titulada Descripte table de cáncer de riñón y su nivel de expresión, muestra los valores del cáncer con los niveles de expresión de los genes de estudio, las columnas muestran diferentes valores como: n - que es el total de pacientes y en relación a la desviación estándar de los valores dispersos
 
 ```
 
