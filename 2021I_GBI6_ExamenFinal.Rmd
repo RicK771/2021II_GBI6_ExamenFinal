@@ -163,9 +163,16 @@ dpi = 300,limitsize=TRUE)
 ### [1 PUNTO] 2.4 Escriba la función ```reg_gen_expression```, con el parámetro ```gen```. En este caso la función visualizará una gráfica de nube de puntos (geom_point) y una regresión por tipo de "dataset". La gráfica será de comparación de gen1 con gen2; por ejemplo en el eje "x" ```GATA3``` y en el eje "y"" ```FN1```.  
 
 ```{r reg_gen_exp}
-# Escriba aquí su función reg_gen_expression
-
-
+reg_gen_expression <- function(d){
+  genx=d[1]
+  geny=d[2]
+  g <- df_long %>% filter (gen == genx)
+  j <- df_long %>% filter (gen == geny)
+  k <- cbind(g,j)
+  r <- tibble("dataset"=k[,1],"gen1"=k[,3],"gen2"=k[,6])
+  h <- r %>% ggplot(aes(x = gen1, y = gen2, color=dataset)) + geom_point() + geom_smooth(method=lm, se=FALSE)
+  h
+}
 ```
 
 
