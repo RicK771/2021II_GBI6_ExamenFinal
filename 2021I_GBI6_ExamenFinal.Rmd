@@ -177,9 +177,14 @@ reg_gen_expression <- function(d){
 
 
 ### [0.5 PUNTOS] 2.5. Utilizando la función ```lapply()``` genera la lista ```reg_genplots``` con las gráficas para cada par de genes posibles. Recuerde que tiene 7 tipos de genes, se debe tener todas las combinaciones posibles por pares de genes (combinatoria sin repetición).
-```{r list_regplots}
-# Escriba el código para generar la lista. 
 
+```{r list_regplots}
+n <- unique(df_long$gen) 
+l <- combn(n,m=2,simplify = FALSE)
+reg_genplots <- lapply(l,reg_gen_expression)
+print (paste("# de elementos reg_genplots es: ", length(reg_genplots)))
+print ("Elemento 11 de la lista es:") 
+reg_genplots[[11]]
 ```
 
 
