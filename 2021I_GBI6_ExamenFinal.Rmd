@@ -199,8 +199,10 @@ dpi = 300,limitsize=TRUE)
 ### [1 PUNTO] 2.7. Interprete los resultados de las figuras ```boxplot3.png``` y ```regresion11.pdf```.
 
 ```{tex}
+#El diagrama de cajas y bigotes muestra la distribución de datos en función de las expresión de los 7 genes los cuales no siguen una distribución norma, aseveración en base a que los datos se encuentran fuera del diagrama y no dentro de él; por otro lado en los diagramas GATA3,ESR1Y GADPHD se observan valores atípicos fuera del margen de estudio
+#Por otro lado en el gráfico de regresión podemos ver que la nube de datos se extiende de forma aleatoria en los ejes gen1 y gen2, motivo por el cual se concluye que los genes no tienen relación alguna al momento de expresarse. 
 
 ```
 
-## 3. CONTROL DE LA VERSIÓN [1 PUNTO]. Se verficará en ell repositorio de GitHub. 
+## 3. CONTROL DE LA VERSIÓN [1 PUNTO]. Se verficará en el repositorio de GitHub. 
 
